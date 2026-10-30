@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        
+        <!-- Formulário de entrada com título obrigatório e descrição opcional -->
+        <div class="entrada-tarefa">
+            <div class="campos-entrada">
+                <input type="text" id="campoTarefa" placeholder="Nova tarefa..." aria-label="Título da nova tarefa">
+                <textarea id="campoDescricao" placeholder="Descrição (opcional)..." rows="2" aria-label="Descrição opcional da tarefa"></textarea>
+            </div>
+            <button id="btnAdicionar" type="button">Adicionar</button>
+        </div>
+
+        <ul id="listaTarefas" aria-label="Lista de tarefas"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

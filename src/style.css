@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f4f6f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 16px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 580px;
+    padding: 32px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #0f172a;
+}
+
+/* Área de criação de tarefa (título + descrição opcional) */
+.entrada-tarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.campos-entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#campoTarefa,
+#campoDescricao,
+.input-edicao-titulo,
+.input-edicao-descricao {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#campoDescricao,
+.input-edicao-descricao {
+    resize: vertical;
+    min-height: 56px;
+    font-size: 0.9rem;
+}
+
+#campoTarefa:focus,
+#campoDescricao:focus,
+.input-edicao-titulo:focus,
+.input-edicao-descricao:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button {
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+#btnAdicionar {
+    background-color: #2563eb;
+    color: #ffffff;
+    align-self: flex-end;
+    width: 100%;
+}
+
+#btnAdicionar:hover {
+    background-color: #1d4ed8;
+}
+
+/* Lista e itens de tarefa */
+#listaTarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-tarefa {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.item-tarefa.item-concluido {
+    background-color: #f1f5f9;
+    opacity: 0.85;
+}
+
+.conteudo-tarefa {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.texto-tarefa {
+    font-size: 1rem;
+    font-weight: 600;
+    word-break: break-word;
+    color: #1e293b;
+}
+
+.descricao-tarefa {
+    font-size: 0.875rem;
+    color: #64748b;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.concluida {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* Formulário inline de edição */
+.form-edicao {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+/* Botões de ação (Concluir, Editar, Remover) */
+.acoes-tarefa {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.btn-concluir {
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+}
+
+.btn-concluir:hover {
+    background-color: #059669;
+}
+
+.btn-editar {
+    background-color: #f59e0b;
+    color: #ffffff;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+}
+
+.btn-editar:hover {
+    background-color: #d97706;
+}
+
+.btn-editar.salvando {
+    background-color: #2563eb;
+}
+
+.btn-editar.salvando:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-remover {
+    background-color: #ef4444;
+    color: #ffffff;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+}
+
+.btn-remover:hover {
+    background-color: #dc2626;
+}
