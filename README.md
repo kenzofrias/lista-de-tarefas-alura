@@ -43,3 +43,12 @@ Aplicação web minimalista de gerenciamento de tarefas desenvolvida com **HTML5
 - [x] **CT-08:** Exclusão automática de tarefas concluídas após 30 dias sem qualquer interação.
 - [x] **CT-09:** Remoção individual de tarefas da lista.
 - [x] **CT-10:** Carregamento dos arquivos estáticos e resposta HTTP 200 no servidor local.
+
+---
+
+<div align="center">
+  
+  **Obrigado pela visita!**  
+  [Kenzo Friás](https://www.github.com/kenzofrias) © 2026
+  
+</div>
